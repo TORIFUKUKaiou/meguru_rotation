@@ -10,7 +10,8 @@ function init() {
   // create a renderer
   const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#meguru'),
-    antialias:true
+    antialias:true,
+    alpha: true
   });
   renderer.setSize(width, height);
   
@@ -99,7 +100,7 @@ function init() {
     
     // Rendering
     renderer.render(scene, camera);
-    renderer.setClearColor(new THREE.Color('white'));//背景色の設定
+    renderer.setClearColor( 0xffffff, 0 );
     requestAnimationFrame(tick);
   }
   
